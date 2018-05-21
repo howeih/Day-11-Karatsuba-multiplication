@@ -15,7 +15,6 @@ fn karatsuba(n1: i64, n2 :i64) -> i64{
     let z0 = karatsuba(low1, low2);
     let z1 = karatsuba(low1 + high1, low2 + high2);
     let z2 = karatsuba(high1, high2);
-    println!("z* {} {} {}",z0, z1, z2);
     (z2)*(10i64.pow(2 * split_pos as u32)) + ((z1 - z2 - z0)* (10i64.pow(split_pos as u32))) + z0
 }
 
